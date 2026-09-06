@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: S3 bucket with parameter and versioning
+
+Parameters:
+  BucketNameParameter:
+    Type: String
+    Description: Name of the S3 bucket
+
+Resources:
+  MyBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName:
+        Ref: BucketNameParameter
+      VersioningConfiguration:
+        Status: Enabled
+
+Outputs:
+  BucketNameOutput:
+    Description: Name of the created S3 bucket
+    Value:
+      Ref: MyBucket

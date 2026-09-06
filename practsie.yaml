@@ -1,0 +1,7 @@
+name: Sumathi
+course: AWS
+active: true
+topics:
+  - JSON
+  - YAML
+  - CloudFormation

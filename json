@@ -1,0 +1,10 @@
+{
+  "name": "Sumathi",
+  "course": "AWS",
+  "active": true,
+  "topics": [
+    "JASON",
+    "YAML",
+    "CloudFormation"
+  ]
+}

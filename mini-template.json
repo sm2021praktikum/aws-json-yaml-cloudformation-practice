@@ -1,0 +1,29 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Mini S3 CloudFormation template",
+  "Parameters": {
+    "BucketNameParameter": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "MyBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": {
+          "Ref": "BucketNameParameter"
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "BucketNameOutput": {
+      "Value": {
+        "Ref": "MyBucket"
+      }
+    }
+  }
+}
